@@ -65,6 +65,10 @@
 
         <!-- Use new privacy indicators for location -->
         <item>privacy/location_indicators_enabled=true</item>
+
+        <!-- Contribute app shortcuts to centralized AppSearch index -->
+        <item>systemui/shortcut_appsearch_integration=true</item>
+
         <!--
             Device Personalization Services (AiAi)
         -->
