@@ -39,10 +39,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
-# Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/cherish/overlay-pixel
-DEVICE_PACKAGE_OVERLAYS += vendor/cherish/overlay-pixel/common
-
 # Pixel customization
 TARGET_SUPPORTS_GOOGLE_RECORDER ?= true
 TARGET_INCLUDE_STOCK_ARCORE ?= true
@@ -57,9 +53,4 @@ PRODUCT_PACKAGES += \
 	libtextclassifier_lang_id_model
 
 # RRO Overlays
-PRODUCT_PACKAGES += \
-    FilesOverlay \
-    GoogleWallpaperPickerOverlay \
-    PixelDocumentsUIGoogleOverlay \
-    PixelSetupWizardAodOverlay \
-    ShadyQuickStepGoogleOverlay
+$(call inherit-product, vendor/cherish/config/rro_overlays.mk)
